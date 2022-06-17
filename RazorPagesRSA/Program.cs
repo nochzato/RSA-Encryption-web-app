@@ -1,7 +1,11 @@
+using RazorPagesRSA.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<RSACypher>();
+builder.Services.AddSingleton<KeyGenerator>();
 
 var app = builder.Build();
 

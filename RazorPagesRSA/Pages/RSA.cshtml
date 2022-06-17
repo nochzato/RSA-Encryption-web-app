@@ -1,5 +1,5 @@
 ﻿@page
-@model RazorPagesRSA.Models.RSAModel
+@model Pages.RSAModel
 @{
 }
 
@@ -8,11 +8,11 @@
 </div>
 
 <div class="form-group mb-3">
-	<textarea class="form-control" placeholder="Private key...">@ViewData["PrivateKey"]</textarea>
+	<textarea class="form-control" placeholder="Private key...">@Model.PrivateKey</textarea>
 </div>
 
 <div class="form-group">
-	<textarea class="form-control" placeholder="Public key...">@ViewData["PublicKey"]</textarea>
+	<textarea class="form-control" placeholder="Public key...">@Model.PublicKey</textarea>
 </div>
 
 <hr />
@@ -21,10 +21,10 @@
 <form method="post" asp-page-handler="encrypt" class="mb-3">
 <div class="form-group row">
 	<div class="col-sm">
-	<label for="DecryptedText" class="col col-form-label">Enter text to encrypt: </label>
+	<label for="text" class="col col-form-label">Enter text to encrypt: </label>
 	</div>
 	<div class="col-sm-5">
-      <textarea class="form-control" id="DecryptedText" rows="5">@ViewData["EncryptedText"]</textarea>
+      <textarea class="form-control" name="text" id="text" rows="5">@Model.DecryptedText</textarea>
     </div>
 	<div class="col-sm-5">
       <button class="btn btn-primary" type="submit">Encrypt</button>
@@ -35,10 +35,10 @@
 <form method="post" asp-page-handler="decrypt">
 <div class="form-group row">
 	<div class="col-sm">
-	<label for="EncryptedText" class="col col-form-label">Enter text to decrypt: </label>
+	<label for="text" class="col col-form-label">Enter text to decrypt: </label>
 	</div>
 	<div class="col-sm-5">
-      <textarea class="form-control" id="EncryptedText" rows="5">@ViewData["DecryptedText"]</textarea>
+      <textarea class="form-control" name="text" id="text" rows="5">@Model.EncryptedText</textarea>
     </div>
 	<div class="col-sm-5">
       <button class="btn btn-primary" type="submit">Decrypt</button>
