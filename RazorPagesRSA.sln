@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesRSA", "RazorPagesRSA\RazorPagesRSA.csproj", "{F86A4D28-9980-4C25-A8FF-48E347FCB7C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesRSA", "RazorPagesRSA\RazorPagesRSA.csproj", "{F86A4D28-9980-4C25-A8FF-48E347FCB7C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSATests", "RSATests\RSATests.csproj", "{2B95EF8D-F34A-4293-8CDC-0FA13AFCA19A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F86A4D28-9980-4C25-A8FF-48E347FCB7C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F86A4D28-9980-4C25-A8FF-48E347FCB7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F86A4D28-9980-4C25-A8FF-48E347FCB7C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B95EF8D-F34A-4293-8CDC-0FA13AFCA19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B95EF8D-F34A-4293-8CDC-0FA13AFCA19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B95EF8D-F34A-4293-8CDC-0FA13AFCA19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B95EF8D-F34A-4293-8CDC-0FA13AFCA19A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
