@@ -20,7 +20,7 @@ namespace RSATests
         [Test]
         public void CorrectCypherDecypher()
         {
-            Assert.AreEqual("a", cypher.Decrypt(cypher.Encrypt("a")));
+            Assert.That(cypher.Decrypt(cypher.Encrypt("1234")), Is.EqualTo("1234"));
         }
     }
 }
