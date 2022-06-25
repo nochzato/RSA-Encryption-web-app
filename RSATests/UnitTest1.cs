@@ -22,5 +22,25 @@ namespace RSATests
         {
             Assert.That(cypher.Decrypt(cypher.Encrypt("1234")), Is.EqualTo("1234"));
         }
+
+        [Test]
+        public void NoInput()
+        {
+            Assert.That(cypher.Decrypt(cypher.Encrypt("")), Is.EqualTo(""));
+        }
+
+        [Test]
+        public void NullInput()
+        {
+            Assert.That(cypher.Decrypt(cypher.Encrypt(null)), Is.EqualTo(""));
+        }
+
+        [Test]
+        public void ExponentEqualsOne()
+        {
+            cypher.PublicKey[0] = 1;
+            cypher.PrivateKey[0] = 1;
+            Assert.That(cypher.Decrypt(cypher.Encrypt("123")), Is.EqualTo("123"));
+        }
     }
 }

@@ -18,6 +18,11 @@ namespace RazorPagesRSA.Models
 
         public string Encrypt(string text)
         {
+            if (string.IsNullOrEmpty(text))
+            {
+                return "";
+            }
+
             BigInteger input = new BigInteger(Int64.Parse(text));
             BigInteger e = PublicKey[0];
             BigInteger N = PublicKey[1];
@@ -27,6 +32,11 @@ namespace RazorPagesRSA.Models
 
         public string Decrypt(string text)
         {
+            if (string.IsNullOrEmpty(text))
+            {
+                return "";
+            }
+
             BigInteger input = new BigInteger(Int64.Parse(text));
             BigInteger d = PrivateKey[0];
             BigInteger N = PrivateKey[1];
