@@ -32,7 +32,7 @@ namespace RSATests
         [Test]
         public void NullInput()
         {
-            Assert.That(cypher.Decrypt(cypher.Encrypt(null)), Is.EqualTo(""));
+            Assert.Throws<ArgumentNullException>(() => cypher.Encrypt(null));
         }
 
         [Test]

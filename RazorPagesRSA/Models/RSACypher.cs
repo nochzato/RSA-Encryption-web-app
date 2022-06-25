@@ -18,7 +18,12 @@ namespace RazorPagesRSA.Models
 
         public string Encrypt(string text)
         {
-            if (string.IsNullOrEmpty(text))
+            if (text == null)
+            {
+                throw (new ArgumentNullException("text"));
+            }
+
+            if (string.IsNullOrWhiteSpace(text))
             {
                 return "";
             }
@@ -32,7 +37,12 @@ namespace RazorPagesRSA.Models
 
         public string Decrypt(string text)
         {
-            if (string.IsNullOrEmpty(text))
+            if (text == null)
+            {
+                throw (new ArgumentNullException("text"));
+            }
+
+            if (string.IsNullOrWhiteSpace(text))
             {
                 return "";
             }
